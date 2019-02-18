@@ -1,2 +1,134 @@
-# awesome-front-end
-Awesome front-end libraries that help you build fast, scalable, and accessible components
+# Awesome Front-End JavaScript
+A list of awesome front-end  JavaScript libraries that help you build fast, scalable, and accessible web apps. The list contains the ones that I've used in production environment and are still relevant as of last time this repo was updated.
+
+## Style
+
+### [Emotion](https://emotion.sh/)
+
+> Emotion is a library designed for writing css styles with JavaScript.
+
+I've been a big fan of CSS-in-JS technique to bring the power of JS logic in my style composition. By importing styles as a module, you are creating more explicit style architecture that is smarter than referencing CSS class via string.
+
+### [color](https://www.npmjs.com/package/color)
+
+> JavaScript library for immutable color conversion and manipulation with support for CSS color strings.
+
+If you already use CSS-in-JS in your project, why not bring smart color conversion utility into your project? This is a very straightforward library that provides functions you've probably used in the past with LESS/SCSS.
+
+## Network
+
+### [axios](https://www.npmjs.com/package/axios)
+
+> Promise based HTTP client for the browser and node.js
+
+While you can make REST API calls with native fetch or with similar libraries, axios provides a built-in HTTP request cancellation. So when your user types strings in autocomplete form field, you can guarantee to show the latest result from a server, vs whichever request resolved the last.
+
+### [debounce-promise](https://www.npmjs.com/package/debounce-promise)
+
+> Create a debounced version of a promise returning function
+
+While cancelling request solves the problem of showing responses in wrong order, your app may still be pounding on a server with many requests. By debouncing promises, you can send minimal amount of requests to a server.
+
+### [jsonp](https://www.npmjs.com/package/jsonp)
+
+> A simple JSONP implementation.
+
+There will be times when you need to work with a server that expects JSONP, and unfortunately axios does not cover it.
+
+### [qs](https://www.npmjs.com/package/qs)
+
+> A querystring parsing and stringifying library with some added security.
+
+Depending on the API server you are working with, you might need to format query strings in particular way. Instead of writing your query string transformers, let qs take care of you.
+
+### [koa](https://www.npmjs.com/package/koa)
+
+> Expressive HTTP middleware framework for node.js to make web applications and APIs more enjoyable to write.
+
+Why a server framework in this list? It's because of the SSR which enables Front-End engineers to generate server-side rendered results. You can definitely start with Express as a starter and learn to use more modular koa as you progress.
+
+## Geojson
+
+### [Turf.js](http://turfjs.org/)
+
+> Modular, simple-to-understand JavaScript functions that speak GeoJSON
+
+Turf.js is a collection of modules that help you work with GeoJSON data. The earth is not linear and you'll want modules to take care of calculating bounding box, distance, etc.
+
+## Search
+
+### [fuse.js](https://fusejs.io/)
+
+> Lightweight fuzzy-search library. Zero dependencies.
+
+There will be times you want to provide a fast and fuzzy-matching search results vs requesting data from server. For example, you may ask your user input for country, state, timezone, etc which is going to be more user-friendly to be able to search vs scroll.
+
+## Textarea
+
+### [linkifyjs](https://www.npmjs.com/package/linkifyjs)
+
+> Linkify is a small yet comprehensive JavaScript plugin for finding URLs in plain-text and converting them to HTML links. It works with all valid URLs and email addresses.
+
+Often it's user-friendly to turn their textarea input (e.g. description field) into a smart output with URLs converted into a link. Be sure to add `rel="noopener noreferrer"` if you are going to use it with `target="_blank"` for security reason.
+
+## Date Time
+
+### [luxon](https://moment.github.io/luxon/)
+
+> A powerful, modern, and friendly wrapper for Javascript dates and times.
+
+Luxon is a light-weight cousin of moment.js with added bonus of immutability. This is generally all you need to do date related operations.
+
+### [moment-timezone](https://momentjs.com/timezone/)
+
+> Parse and display dates in any timezone.
+
+If you need to create a timezone modules with accurate time offsets, you'll want to generate them dynamically. Unfortunately, Luxon does not provide a data set so you'll need to use this library in conjunction.
+
+## Gesture
+
+### [Hammer.js](https://hammerjs.github.io/)
+
+> Add touch gestures to your webapp.
+
+If you worked hard to optimize your web app for mobile screens, you might as well provide handy gestures that some users might expect (e.g. swipe to move between tabs). Hammer.js provides a simple way to let you run functions based on gestures.
+
+## Utilities
+
+### [lodash](https://lodash.com/)
+
+> A modern JavaScript utility library delivering modularity, performance & extras.
+
+While ES6 brought many handy methods at our disposal, lodash still has loads of useful methods we'll be able to leverage and save time.
+
+### [git-rev-sync](https://www.npmjs.com/package/git-rev-sync)
+
+> Synchronously get the current git commit hash, tag, count, branch or commit message. Forked from git-rev.
+
+This library is useful when you want to tag your build with commit hash vs timestamp of build (locally or in CI env).
+
+## React
+
+### [mobx](https://mobx.js.org/)
+
+> Simple, scalable state management
+
+Mobx is simple, and that is beneficial for working with peer coders or for your own sanity.
+
+### [next](https://nextjs.org/)
+
+> Production grade React applications that scale. The world’s leading companies have used Next.js to build server-rendered applications, static websites, and more.
+
+If you want to create React based app that is built for SSR, go with Next.js. Once you learn the basics, you'll feel great about putting minimal effort to gain benefit of automatic code-splitting, SEO benefits, initial bundle size, etc.
+
+### [react-copy-to-clipboard](https://www.npmjs.com/package/react-copy-to-clipboard)
+
+> Copy to clipboard React component
+
+If you need a share button that copies the URL into users' clipboard, this library will help you do exactly that.
+
+### [react-day-picker](https://github.com/gpbl/react-day-picker)
+
+> Flexible date picker for React
+
+This is a flexible and accessible date picker for React.
