@@ -1,13 +1,25 @@
 # Awesome Front-End JavaScript
 A list of awesome front-end  JavaScript libraries that help you build fast, scalable, and accessible web apps. The list contains the ones that I've used in production environment and are still relevant as of last time this repo was updated.
 
-## Style
+## Design
 
 ### [Emotion](https://emotion.sh/)
 
 > Emotion is a library designed for writing css styles with JavaScript.
 
 I've been a big fan of CSS-in-JS technique to bring the power of JS logic in my style composition. By importing styles as a module, you are creating more explicit style architecture that is smarter than referencing CSS class via string.
+
+### [d3](https://www.npmjs.com/package/d3)
+
+> D3 (or D3.js) is a JavaScript library for visualizing data using web standards. D3 helps you bring data to life using SVG, Canvas and HTML. D3 combines powerful visualization and interaction techniques with a data-driven approach to DOM manipulation, giving you the full capabilities of modern browsers and the freedom to design the right visual interface for your data.
+  
+The best data visualization library out there that can be used natively within any front-end eco-system including React. Use it without a wrapper and you’ll be able to utilize this library to it's full potential.
+
+### [Greensock](https://www.npmjs.com/package/gsap)
+
+> Ultra high-performance, professional-grade animation for the modern web
+
+Greensock is hands-down the best JavaScript animation library out there. They have a paid plugins which is worth the price if you are looking to achieve morphing and stroke animation.
 
 ### [color](https://www.npmjs.com/package/color)
 
@@ -101,6 +113,12 @@ If you worked hard to optimize your web app for mobile screens, you might as wel
 
 While ES6 brought many handy methods at our disposal, lodash still has loads of useful methods we'll be able to leverage and save time.
 
+### [uniqid](https://www.npmjs.com/package/uniqid)
+
+> A Unique Hexatridecimal ID generator.
+
+When you need to work with an array of objects (e.g. list of user entered emails), that does not have unique ID, you can use this library vs using index.
+
 ### [git-rev-sync](https://www.npmjs.com/package/git-rev-sync)
 
 > Synchronously get the current git commit hash, tag, count, branch or commit message. Forked from git-rev.
@@ -121,11 +139,39 @@ Mobx is simple, and that is beneficial for working with peer coders or for your 
 
 If you want to create React based app that is built for SSR, go with Next.js. Once you learn the basics, you'll feel great about putting minimal effort to gain benefit of automatic code-splitting, SEO benefits, initial bundle size, etc.
 
+### [react-scroll](https://www.npmjs.com/package/react-scroll)
+
+> Component for animating vertical scrolling.
+  
+If you need to trigger a scroll within a container (vs global scroll bar), this will come in handy.
+
 ### [react-copy-to-clipboard](https://www.npmjs.com/package/react-copy-to-clipboard)
 
 > Copy to clipboard React component
 
 If you need a share button that copies the URL into users' clipboard, this library will help you do exactly that.
+
+### [react-truncate](https://www.npmjs.com/package/react-truncate)
+
+A handy library that can truncate text
+
+### [react-countup](https://www.npmjs.com/package/react-countup)
+
+> A configurable React component wrapper around CountUp.js.
+  
+Spice up your dashboard numbers with this library that can gradually count up and down the numbers
+
+### [react-modal](https://www.npmjs.com/package/react-modal)
+
+> Accessible modal dialog component for React.JS
+
+The simple to use accessible modal for React, a no-brainer choice.
+
+### [react-onclickoutside](https://www.npmjs.com/package/react-onclickoutside)
+
+> This is a React Higher Order Component (HOC) that you can use with your own React components if you want to have them listen for clicks that occur somewhere in the document, outside of the element itself (for instance, if you need to hide a menu when people click anywhere else on your page).
+
+A handy HoC that help trigger close on flyout components you build.  
 
 ### [react-day-picker](https://github.com/gpbl/react-day-picker)
 
